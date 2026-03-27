@@ -38,11 +38,11 @@ python3 analyzer.py --export_dir </path/to/apple_health_export> --start_date 202
 
 ```text
 [1] Parsing Main Export Data (This may take a minute)...
--> Average Daily Steps: 8500 (120 days recorded)
--> Average Resting HR: 64.0 bpm
--> Average VO2Max: 34.33 mL/kg/min
--> Active Calories Burned (Avg): 543 kcal/day
--> Walking Steadiness: 88.6% (OK)
+-> Average Daily Steps: 10450 (100 days recorded)
+-> Average Resting HR: 60.5 bpm
+-> Average VO2Max: 42.15 mL/kg/min
+-> Active Calories Burned (Avg): 610 kcal/day
+-> Walking Steadiness: 94.2% (OK)
 
 [2] Parsing GPS Workouts (For Joint/Elevation checks)...
 -> Total GPS Workouts: 59
