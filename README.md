@@ -24,9 +24,14 @@ No external dependencies are required! The script relies entirely on Python 3 St
 
 ## 🛠️ Usage (Graphical Interface)
 
-**For Non-Technical Users:**
-Simply double-click `analyzer.py` (or run it without any arguments). A graphical window will pop up. 
-Click the "Browse" button, select your unzipped `apple_health_export` folder, and wait 1-2 minutes for the report to generate right on your screen!
+**For Non-Technical Users (1-Click Launch):**
+1. Download this entire folder (Click `Code` -> `Download ZIP`) and unzip it on your computer.
+2. **Double-click the launcher specific to your system:**
+   - 🍏 **Mac Users**: Double-click `Run-Analyzer-Mac.command`
+   - 🪟 **Windows Users**: Double-click `Run-Analyzer-Windows.bat`
+3. A graphical window will pop up. Click the "Browse" button, select your unzipped `apple_health_export` folder, and wait 1-2 minutes for the report!
+
+*(Note for Mac users: If it says permission denied, open your Terminal, type `chmod +x ` with a trailing space, drag the `Run-Analyzer-Mac.command` file into the terminal, and hit enter.)*
 
 **For Terminal Power Users:**
 You can still use the classic CLI mode:
@@ -84,15 +89,21 @@ MIT License.
 2. 从你的 iPhone 中导出 Apple 健康数据（健康 App -> 右上角头像 -> 导出所有健康数据）。
 3. 将发送到电脑的 `export.zip` 解压。
 
-## 🛠️ 如何使用
+## 🛠️ 如何使用 (图形化界面，专为小白设计)
 
-直接让脚本指向解压后的 Apple Health 导出文件夹。你还可以选填 `--start_date` 来过滤掉手机时代久远的历史残留数据（极其推荐，防止被旧设备拉低了现在的运动平均值）。
+**对于不懂代码的普通用户（完全无脑点击）：**
+1. 下载本仓库的代码（点击绿色的 `Code` 按钮 -> `Download ZIP`），并在电脑上解压。
+2. **双击运行对应你系统的启动文件：**
+   - 🍏 **Mac 苹果电脑用户**：直接双击 `Run-Analyzer-Mac.command`
+   - 🪟 **Windows 电脑用户**：直接双击 `Run-Analyzer-Windows.bat`
+3. 随后会弹出一个全中文界面的图形化软件黑框。点击这里正中间的巨大按钮，**选择你刚刚解压好的 `apple_health_export` 数据文件夹**。
+4. 由于数据极大往往高达几个 G，点击后程序可能会有一到两分钟的读取卡顿，请去倒杯水，耐心等待最终极的身体健康报告生成！
 
+*(附注：如果是 Mac 首次运行提示无权限，只需打开终端，输入 `chmod +x ` 并把那个 .command 文件拖放进去敲回车即可。)*
+
+**对于懂代码的极客用户 (命令行模式)：**
+依然保留了经典的传参运行方式：
 ```bash
-# 基础用法
-python3 analyzer.py --export_dir </你的路径/apple_health_export>
-
-# 只看近期的运动基数（强推用法）
 python3 analyzer.py --export_dir </你的路径/apple_health_export> --start_date 2025-11-30
 ```
 
