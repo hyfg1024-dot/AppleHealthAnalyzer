@@ -22,15 +22,15 @@ No external dependencies are required! The script relies entirely on Python 3 St
 2. Export your Apple Health Data from your iPhone (Health App -> Profile -> Export All Health Data).
 3. Unzip the `export.zip` folder on your computer.
 
-## 🛠️ Usage
+## 🛠️ Usage (Graphical Interface)
 
-Simply point the script to the unzipped Apple Health export folder. You can optionally provide a `--start_date` to filter out old or "polluted" historical data (e.g., from older Apple Watches).
+**For Non-Technical Users:**
+Simply double-click `analyzer.py` (or run it without any arguments). A graphical window will pop up. 
+Click the "Browse" button, select your unzipped `apple_health_export` folder, and wait 1-2 minutes for the report to generate right on your screen!
 
+**For Terminal Power Users:**
+You can still use the classic CLI mode:
 ```bash
-# Basic usage
-python3 analyzer.py --export_dir </path/to/apple_health_export>
-
-# Filter for recent data only (Highly Recommended)
 python3 analyzer.py --export_dir </path/to/apple_health_export> --start_date 2025-11-30
 ```
 
